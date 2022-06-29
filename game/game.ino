@@ -18,6 +18,10 @@ struct Direction {
 
 };
 
+Direction pp[PIXEL_COUNT];
+int userPosition = 0;
+int alienPosition = 0;
+
 // Declare our NeoPixel strip object:
 Adafruit_NeoPixel strip(PIXEL_COUNT, PIXEL_PIN, NEO_GRB + NEO_KHZ800);
 
@@ -38,7 +42,7 @@ void setup() {
 
 void loop() {
   // Get current button state.
-  boolean newState = digitalRead(BUTTON_PIN);
+  /*boolean newState = digitalRead(BUTTON_PIN);
 
   // Check if state changed from high to low (button press).
   if((newState == LOW) && (oldState == HIGH)) {
@@ -82,6 +86,34 @@ void loop() {
 
   // Set the last-read button state to the old state.
   oldState = newState;
+  */
+}
+
+void mazeSetup1() {
+  pp[0].right = false;
+}
+
+
+/**
+* returns true if it is possible to go left from the given {position}
+*/
+bool goLeft(int position) {
+
+}
+
+
+bool goRight(int position) {
+  
+}
+
+
+bool goUp(int position) {
+  
+}
+
+
+bool goDown(int position) {
+  
 }
 
 // Fill strip pixels one after another with a color. Strip is NOT cleared
